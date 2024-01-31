@@ -1,7 +1,5 @@
-FROM ubuntu
-ENV APP nginx
-RUN apt-get update && apt-get install -y APP
-WORKDIR /site
-ADD /site/index.html ./
+FROM nginx:alpine
+COPY. /site
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT [". /site/index.html"]
+
