@@ -1,0 +1,5 @@
+FROM nginx:alpine
+COPY. /site
+EXPOSE 80
+ENTRYPOINT [". /site/index.html"]
+
