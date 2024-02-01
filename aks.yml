@@ -24,3 +24,4 @@ spec:
           image: reg01kalyan.azurecr.io/demosite:latest   # add this to next line- imagepullpolicy: Always
           ports:
             - containerPort: 80
+  type: LoadBalancer
