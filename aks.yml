@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demosite
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kalyan-demosite
+  template:
+    metadata:
+      labels:
+        app: kalyan-demosite
+    spec:
+      containers:
+      - name: demosite repo
+        image: reg01kalyan.azurecr.io/demosite:latest # Replace placeholders with actual values
+        imagepullpolicy: Always
+        ports:
+        - containerPort: 80 # Port your application listens on
