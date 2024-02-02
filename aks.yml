@@ -1,27 +1,12 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
-  name: demosite
-  labels:
-    name: demosite
-    app: demo-site
+  name: demosite-service
 spec:
-  replicas: 1
   selector:
-    matchLabels:
-      name: demosite
-      app: demo-site
-    
-  template:
-    metadata:
-      name: demosite
-      labels:
-        name: demosite
-        app: demo-site
-    spec:
-      containers:
-        - name: demo-site
-          image: reg01kalyan.azurecr.io/demosite:latest   # add this to next line- imagepullpolicy: Always
-          ports:
-            - containerPort: 80
+    app: demosite
+  ports:
+    - protocol: TCP 
+      port: 80
+      targetPort: 80
   type: LoadBalancer
