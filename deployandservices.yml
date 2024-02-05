@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demosite
-        image: reg01kalyan.azurecr.io/demosite:latest
+        image: kalyanproject.azurecr.io/project-abc:latest
         ports:
         - containerPort: 80
         
