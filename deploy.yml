@@ -17,5 +17,5 @@ spec:
         image: kalyanteja/demo:latest
         ports:
         - containerPort: 80
-      imagepullsecrets:
+      imagePullSecrets:
       - name: cal01
