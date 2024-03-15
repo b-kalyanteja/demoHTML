@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demosite-service
+  name: docimage-service
 spec:
   selector:
-    app: demosite
+    app: docimage
   ports:
   - name: http  
     port: 80

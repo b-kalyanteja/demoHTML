@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demosite-deployment
+  name: docimage-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: demosite
+      app: docimage
   template:
     metadata:
       labels:
-        app: demosite
+        app: docimage
     spec:
       containers:
-      - name: demosite
+      - name: docimage
         image: kalyanteja/demo:latest
         ports:
         - containerPort: 80
